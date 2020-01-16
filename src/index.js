@@ -27,3 +27,6 @@ const test = () => {
 		.then(delay(2000))
 		.then(logValue(x => `timer finished with ${x}`))
 }
+
+// make test function global
+window.test = test
