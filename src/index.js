@@ -28,5 +28,6 @@ const test = () => {
 		.then(logValue(x => `timer finished with ${x}`))
 }
 
-// make test function global
-window.test = test
+window.addEventListener('load', () => {
+	document.querySelector('button').addEventListener('click', test)
+})
